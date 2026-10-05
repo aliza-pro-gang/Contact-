@@ -1,0 +1,52 @@
+<!doctype html>
+<html lang="ur" dir="rtl">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>Real Chat</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <main class="app">
+    <section id="loginScreen" class="card login">
+      <h1>Real Chat</h1>
+      <p>Google سے Login کریں اور اپنی User ID کے ذریعے دوست تلاش کریں۔</p>
+      <button id="googleLogin">Google سے Login</button>
+    </section>
+
+    <section id="appScreen" class="hidden">
+      <header class="topbar">
+        <div>
+          <strong>Real Chat</strong>
+          <small id="myId"></small>
+        </div>
+        <button id="logout" class="secondary">Logout</button>
+      </header>
+
+      <div class="search card">
+        <input id="searchId" inputmode="numeric" maxlength="7" placeholder="7 ہندسوں کی User ID لکھیں">
+        <button id="searchBtn">Search</button>
+      </div>
+
+      <div id="userResult" class="card hidden"></div>
+
+      <section id="chatPanel" class="chat card hidden">
+        <div class="chatHead">
+          <div>
+            <strong id="chatName">User</strong>
+            <small id="chatStatus">Offline</small>
+          </div>
+          <span id="chatId"></span>
+        </div>
+        <div id="messages" class="messages"></div>
+        <form id="messageForm" class="composer">
+          <input id="messageInput" autocomplete="off" placeholder="Message لکھیں..." required>
+          <button>Send</button>
+        </form>
+      </section>
+    </section>
+  </main>
+
+  <script type="module" src="app.js"></script>
+</body>
+</html>
